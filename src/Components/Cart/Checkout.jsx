@@ -45,7 +45,14 @@ const Checkout = (props) => {
     if (!formIsValid) {
       return
     }
+    const data = {
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredcity,
+      postalCode: enteredPostalCode,
+    }
     //Submit Cart Data
+    props.onConfirm(data)
   }
   const nameInputstyling = formInputsValidity.name
     ? styles.control
